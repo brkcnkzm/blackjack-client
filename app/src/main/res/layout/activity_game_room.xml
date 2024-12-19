@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    <!-- Scoreboard -->
+
+    <Button
+        android:id="@+id/leaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:text="Leave"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/roomNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:text="Room"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/scoreBoardTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="256dp"
+        android:text="Score: 0 - 0"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Rival's Cards -->
+    <LinearLayout
+        android:id="@+id/rivalCardLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="128dp"
+        android:orientation="horizontal" />
+
+    <!-- Rival's Name and Score -->
+    <TextView
+        android:id="@+id/rivalNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rivalCardLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Rival"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <!-- Player's Name and Score -->
+    <TextView
+        android:id="@+id/selfNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/selfCardLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:text="You: 0 Points"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Player's Cards -->
+    <LinearLayout
+        android:id="@+id/selfCardLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="64dp"
+        android:orientation="horizontal" />
+
+    <!-- Action Buttons (Centered in the Middle) -->
+    <LinearLayout
+        android:id="@+id/actionButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/hitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hit"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/standButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stand" />
+    </LinearLayout>
+
+
+    <!-- Status Text -->
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/actionButtons"
+        android:layout_marginBottom="16dp"
+        android:text="Waiting for players..."
+        android:textSize="18sp" />
+</RelativeLayout>
